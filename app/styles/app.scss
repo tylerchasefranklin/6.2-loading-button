@@ -1,0 +1,62 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: fantasy;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  margin: 40px auto;
+  text-align: center;
+}
+
+body {
+  background-image: url('http://cdn.wallpapersafari.com/28/58/dcSM7K.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: #052298;
+}
+
+.label {
+  color: black;
+  font-size: 14px;
+}
+
+.btn {
+  background-color: #ff2400;
+  outline: none;
+  color: black;
+}
+
+.btn:focus {
+  outline: none;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.heroes {
+  margin-top: 27px;
+}
+
+ul {
+  list-style: circle;
+}
+
+li {
+  overflow: hidden;
+  color: limegreen;
+  font-size: 15px;
+}
