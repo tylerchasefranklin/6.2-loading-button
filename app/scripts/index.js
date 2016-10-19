@@ -12,7 +12,7 @@ var data = [
   new models.SuperHero({name: 'Starlord', team: 'Guardians of the Galaxy'}),
   new models.SuperHero({name: 'Groot', team: 'Guardians of the Galaxy'}),
   new models.SuperHero({name: 'Quake', team: 'Inhumans'}),
-  // new models.SuperHero({name: 'Gambit', team: 'X-Men'}),
+  new models.SuperHero({name: 'Gambit', team: 'X-Men'}),
   new models.SuperHero({name: 'Psylocke', team: 'X-Men'}),
   new models.SuperHero({name: 'Human Torch', team: 'Fantastic Four'})
 ];
@@ -46,7 +46,7 @@ heroList.on('add', function(hero){
   $('.heroes ul').append('<li>' + hero.get('name') + ':' + '  ' + hero.get('team') + '</li>');
 });
 
-$('.submit').on('click', function(){
+$('.submit').on('click', function(event){
   event.preventDefault();
 
   $('.label').html('Loading...').prop('disabled', true);
@@ -54,7 +54,10 @@ $('.submit').on('click', function(){
   $('.submit').html("Submit").prop('disabled', false);
   });
 
-$('.submit2').on('click', function(){
+$('.submit2').on('click', function(event){
+  event.preventDefault();
+  console.log($('#hero-name').val());
+
   heroList.create({'name': $('#hero-name').val(), 'team': $('#hero-team').val()});
   $('#ingredient').val('');
   $('#name').val('');
